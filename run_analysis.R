@@ -73,4 +73,4 @@ musigma <- completedata[,musigmaheaders]
 outputtable <-  musigma %>%
   group_by(subject, activity) %>%
   summarize_all(funs(mean), na.rm = TRUE)
-write.table(outputtable, file = "tidyoutput")
+write.table(outputtable, file = "tidyoutput.txt", row.name=FALSE)
